@@ -43,13 +43,11 @@ static string ReadString( string prompt )
         Console.WriteLine( "" );
     }
 }
-
-static int ReadPositiveNumber( string сhecKNumber )
+static int ReadPositiveNumber( string promt )
 {
-
     while ( true )
     {
-        Console.Write( сhecKNumber );
+        Console.Write( promt );
         var operand = Console.ReadLine();
         bool isResult = int.TryParse( operand, out int result );
         if ( isResult && result > 0 )
@@ -60,8 +58,6 @@ static int ReadPositiveNumber( string сhecKNumber )
         Console.WriteLine( "" );
     }
 }
-
-
 static void ConfirmOrder( string name, int count, string product, string address, DateTime deliveryDate )
 {
     Console.WriteLine( $"Здравствуйте, {name} , вы заказали {count} {product} на адрес {address}, все верно?" );
